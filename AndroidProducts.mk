@@ -15,5 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_wingray.mk \
-    $(LOCAL_DIR)/omni_wingray.mk
+    $(LOCAL_DIR)/liquid.mk 

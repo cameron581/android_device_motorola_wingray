@@ -1,5 +1,6 @@
 #
-# Copyright 2012 The Android Open Source Project
+# Copyright (C) 2012 The Android Open Source Project
+# Copyright (C) 2012 The LiquidSmooth Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,27 +15,24 @@
 # limitations under the License.
 #
 
-# Sample: This is where we'd set a backup provider if we had one
-# $(call inherit-product, device/sample/products/backup_overlay.mk)
+# Not sure what to put here yet, try this for now
+$(call inherit-product, vendor/liquid/config/common_gsm.mk)
 
-# Inherit from the common Open Source product configuration
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+# tablet
+$(call inherit-product, vendor/liquid/config/common_tablet.mk)
 
-# Inherit from our custom product configuration
-$(call inherit-product, vendor/omni/config/common.mk)
+# device
+$(call inherit-product, device/motorola/wingray/device.mk)
 
-# Inherit from hardware-specific part of the product configuration
-$(call inherit-product, device/moto/wingray/device.mk)
-
-PRODUCT_NAME := omni_wingray
-PRODUCT_DEVICE := wingray
+PRODUCT_NAME := liquid_wingray
 PRODUCT_BRAND := motorola
+PRODUCT_DEVICE := wingray
 PRODUCT_MODEL := Xoom Wifi
 PRODUCT_MANUFACTURER := MOTOROLA
+PRODUCT_PROPERTY_OVERRIDES += ro.buildzipid=liquid.wingray.$(shell date +%m%d%y).$(shell date +%H%M%S)
 
 # Kernel inline build
 TARGET_KERNEL_CONFIG := stingray_defconfig
 TARGET_VARIANT_CONFIG := stingray_defconfig
-# TARGET_SELINUX_CONFIG := stingray_defconfig
 
-$(call inherit-product-if-exists, vendor/moto/wingray/wingray-vendor.mk)
+$(call inherit-product-if-exists, vendor/motorola/wingray/wingray-vendor.mk)
