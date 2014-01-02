@@ -15,14 +15,11 @@
 # limitations under the License.
 #
 
-# Not sure what to put here yet, try this for now
-$(call inherit-product, vendor/liquid/config/common_gsm.mk)
+# device
+$(call inherit-product, device/motorola/wingray/device.mk)
 
 # tablet
 $(call inherit-product, vendor/liquid/config/common_tablet.mk)
-
-# device
-$(call inherit-product, device/motorola/wingray/device.mk)
 
 PRODUCT_NAME := liquid_wingray
 PRODUCT_BRAND := motorola
