@@ -1,0 +1,2 @@
+add_lunch_combo cm_wingray-userdebug
+add_lunch_combo full_wingray-userdebug
