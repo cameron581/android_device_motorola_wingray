@@ -19,9 +19,9 @@
 $(call inherit-product, device/motorola/wingray/device.mk)
 
 # tablet
-$(call inherit-product, vendor/liquid/config/common_tablet.mk)
+$(call inherit-product, vendor/cm/config/common_tablet.mk)
 
-PRODUCT_NAME := liquid_wingray
+PRODUCT_NAME := cm_wingray
 PRODUCT_BRAND := motorola
 PRODUCT_DEVICE := wingray
 PRODUCT_MODEL := Xoom Wifi
