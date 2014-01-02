@@ -18,9 +18,6 @@
 PRODUCT_PROPERTY_OVERRIDES += \
         ro.carrier=wifi-only
 
-# Sample: This is where we'd set a backup provider if we had one
-# $(call inherit-product, device/sample/products/backup_overlay.mk)
-# Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
 PRODUCT_NAME := full_wingray
@@ -30,6 +27,7 @@ PRODUCT_MODEL := Xoom Wifi
 
 PRODUCT_MANUFACTURER := MOTOROLA
 PRODUCT_RESTRICT_VENDOR_FILES := true
+
 # Inherit from hardware-specific part of the product configuration
-$(call inherit-product, device/moto/wingray/device.mk)
-$(call inherit-product-if-exists, vendor/moto/wingray/wingray-vendor.mk)
+$(call inherit-product, device/motorola/wingray/device.mk)
+$(call inherit-product-if-exists, vendor/motorola/wingray/wingray-vendor.mk)

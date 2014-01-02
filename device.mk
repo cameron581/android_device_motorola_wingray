@@ -19,9 +19,9 @@
 #
 # Everything in this directory will become public
 
-$(call inherit-product,device/moto/wingray/device-common.mk)
+$(call inherit-product,device/motorola/wingray/device-common.mk)
 
-DEVICE_PACKAGE_OVERLAYS := device/moto/wingray/overlay device/moto/wingray/overlay-common
+DEVICE_PACKAGE_OVERLAYS := device/motorola/wingray/overlay device/moto/wingray/overlay-common
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.carrier=wifi-only
